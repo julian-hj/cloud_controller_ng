@@ -1090,7 +1090,7 @@ RSpec.describe 'Apps' do
     let!(:service_binding) do
       VCAP::CloudController::ServiceBinding.make(
         service_instance: service_instance,
-        app:              process,
+        app:              process.app,
         credentials:      { 'creds-key' => 'creds-val' }
       )
     end
